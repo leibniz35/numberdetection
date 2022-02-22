@@ -16,8 +16,15 @@ filenamee = "1.png"
 urlretrieve(urll,filenamee)
 st.image(filenamee)
 
+
+
+modelPath = Path('/app/src/standford_data_make')
+open(modelPath/'export.pkl','rb')
+
 st.title("NUMBER CLASSIFIER")
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
+modelPath = Path('/app/src/standford_data_make')
+open(modelPath/'export.pkl','rb')
 learn_inf = load_learner(Path("export.pkl"), 'rb')
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
