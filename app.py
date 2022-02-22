@@ -17,7 +17,7 @@ st.image(filenamee)
 
 st.title("NUMBER CLASSIFIER")
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
-learn_inf = load_learner(Path("export.pkl"))
+learn_inf = load_learner(Path("export.pkl"), 'rb')
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
     st.image(img, caption='Your Image.', use_column_width=True)
