@@ -6,26 +6,19 @@ from urllib.request import urlretrieve
 import pathlib
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
-    
-url = ("http://dl.dropboxusercontent.com/s/sclyjuhgakarplh/export.pkl?raw=1")
-filename = "export.pkl"
-urlretrieve(url,filename)
+
+#url = ("http://dl.dropboxusercontent.com/s/sclyjuhgakarplh/export.pkl?raw=1")
+#filename = "export.pkl"
+#urlretrieve(url,filename)
 
 urll = ("http://dl.dropboxusercontent.com/s/ecl4tj6q2u8s4q3/fig-03_5.png?raw=1")
 filenamee = "1.png"
 urlretrieve(urll,filenamee)
 st.image(filenamee)
 
-
-
-modelPath = Path('/app/src/standford_data_make')
-open(modelPath/'export.pkl','rb')
-
 st.title("NUMBER CLASSIFIER")
 uploaded_file = st.file_uploader("Choose an image...", type="jpg")
-modelPath = Path('/app/src/standford_data_make')
-open(modelPath/'export.pkl','rb')
-learn_inf = load_learner(Path("export.pkl"), 'rb')
+learn_inf = load_learner(Path("export.pkl"))
 if uploaded_file is not None:
     img = Image.open(uploaded_file)
     st.image(img, caption='Your Image.', use_column_width=True)
