@@ -4,7 +4,8 @@ from PIL import Image
 from fastai.vision.all import load_learner, Path
 from urllib.request import urlretrieve
 import pathlib
-
+temp = pathlib.PosixPath
+pathlib.PosixPath = pathlib.WindowsPath
     
 url = ("http://dl.dropboxusercontent.com/s/sclyjuhgakarplh/export.pkl?raw=1")
 filename = "export.pkl"
