@@ -8,8 +8,8 @@ temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 
 url = ("http://dl.dropboxusercontent.com/s/sclyjuhgakarplh/export.pkl?raw=1")
-
-urlretrieve(url,"export.pkl")
+filename = "export.pkl"
+urlretrieve(url,filename)
 
 urll = ("http://dl.dropboxusercontent.com/s/ecl4tj6q2u8s4q3/fig-03_5.png?raw=1")
 filenamee = "1.png"
