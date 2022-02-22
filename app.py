@@ -7,7 +7,8 @@ import pathlib
 temp = pathlib.PosixPath
 pathlib.PosixPath = pathlib.WindowsPath
 
-url = ("http://dl.dropboxusercontent.com/s/sclyjuhgakarplh/export.pkl?raw=1")
+url = ("http://dl.dropboxusercontent.com/s/8enqf9v1s1fq9ty/mnist.pkl?raw=1")
+#url = ("http://dl.dropboxusercontent.com/s/sclyjuhgakarplh/export.pkl?raw=1")
 filename = "export.pkl"
 urlretrieve(url,filename)
 
